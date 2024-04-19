@@ -1,0 +1,187 @@
+/* BookAppointment.css */
+
+/* General styles */
+.appointment-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calendar-container {
+  margin-bottom: 20px;
+}
+
+.time-container {
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.time-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.time-item {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.time-item.disabled {
+  cursor: not-allowed;
+  background-color: #f2f2f2;
+}
+
+.time-item.enabled:hover {
+  background-color: #f0f0f0;
+}
+
+.status-container {
+  text-align: center;
+}
+
+.status-message {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.book-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+/* Calendar styles */
+.react-calendar {
+  width: 100%;
+  /* max-width: 400px; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.react-calendar__navigation {
+  background-color: rgb(48, 106, 137);
+  color: #fff !important;
+}
+
+.react-calendar__navigation button {
+  font-size: 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+   background-color: rgb(48, 106, 137);
+}
+
+.react-calendar__navigation button[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.react-calendar__navigation button:enabled:active {
+  background-color: #003d7f;
+}
+
+.react-calendar__navigation button:focus {
+  outline: none;
+}
+
+.react-calendar__month-view__weekdays {
+  font-weight: bold;
+}
+
+.react-calendar__tile--active {
+  background-color: #007bff !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background-color: #0056b3 !important;
+}
+
+.react-calendar__tile--active:enabled:active {
+  background-color: #003d7f !important;
+}
+
+.react-calendar__tile--now {
+  background-color: #f0f0f0 !important;
+  color: #000 !important;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background-color: #dcdcdc !important;
+}
+
+.react-calendar__tile--now:enabled:active {
+  background-color: #c0c0c0 !important;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background-color: #f0f0f0 !important;
+}
+
+.react-calendar__tile--hasActive:enabled:active {
+  background-color: #dcdcdc !important;
+}
+
+.react-calendar__tile--weekend {
+  color: #007bff;
+}
+
+.react-calendar__tile--weekend:enabled:hover,
+.react-calendar__tile--weekend:enabled:focus {
+  background-color: #e6f7ff;
+}
+
+.react-calendar__tile--weekend:enabled:active {
+  background-color: #b3e0ff;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6 !important;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover:enabled:hover,
+.react-calendar--selectRange .react-calendar__tile--hover:enabled:focus {
+  background-color: #dcdcdc !important;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover:enabled:active {
+  background-color: #c0c0c0 !important;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover:enabled:active {
+  background-color: #c0c0c0 !important;
+}
+.book-button:disabled{
+  background-color: rgb(214, 214, 214);
+  cursor: not-allowed;
+}

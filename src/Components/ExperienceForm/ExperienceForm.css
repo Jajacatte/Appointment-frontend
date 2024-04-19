@@ -1,0 +1,47 @@
+.experience-form-container {
+  margin-bottom: 20px;
+}
+
+.experience-group {
+  margin-bottom: 10px;
+}
+
+.input-row {
+  display: flex;
+}
+@media (max-width:992px) {
+  .input-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+}
+
+.input-group {
+  flex: 1;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  /* margin-bottom: 10px; */
+}
+
+.remove-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-button:hover {
+  background-color: #ff4500;
+}

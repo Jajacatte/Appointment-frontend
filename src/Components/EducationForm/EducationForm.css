@@ -1,0 +1,72 @@
+.pp{
+    font-size: 13px;
+}
+
+.education-form-container {
+  margin-bottom: 20px;
+}
+
+.education-group {
+  margin-bottom: 10px;
+}
+
+.input-row {
+  display: flex;
+  gap: 6px;
+}
+@media (max-width:992px) {
+  .input-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+}
+
+
+.input-group {
+  flex: 1;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 0 !important;
+  /* margin-bottom: 10px; */
+}
+
+.remove-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-button:hover {
+  background-color: #ff4500;
+}
+.cc{
+    cursor: pointer;
+}
+.cc span{
+   color: var(--color-primary);
+}
+
+.cc h5{
+    color: var(--color-primary);
+    margin-left: 0 !important;
+}
+
+.bb{
+    /* border: 2px solid red; */
+}

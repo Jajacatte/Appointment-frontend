@@ -1,0 +1,198 @@
+.patient {
+  display: flex;
+  position: relative;
+  /* border: 2px solid green; */
+}
+
+.sidebar {
+  width: 250px; /* Adjust as needed */
+  min-height: 100vh;
+  /* position: -webkit-sticky; */
+  position: sticky;
+  top: 67px; /* Height of the header */
+  /* padding: 20px; */
+  border: 1px solid rgb(233, 233, 233);
+}
+
+.main {
+  width: calc(100% - 250px); /* Subtract 250px from 100% */
+  padding: 0;
+}
+
+.p-profile-img {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid rgb(243, 243, 243);
+}
+.ic span {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+.p-top {
+  border-bottom: 1px solid rgb(233, 233, 233);
+  padding: 0.8rem;
+}
+.p-down {
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+.p-down span {
+  font-size: 1.2rem;
+}
+
+.active h3 {
+  color: var(--color-primary);
+}
+.active span {
+  color: var(--color-primary);
+}
+.da {
+  /* border: 2px solid greenyellow; */
+}
+.da h3 {
+  /* border: 2px solid red; */
+  text-align: center;
+}
+.da-img {
+  text-align: center;
+  /* border: 2px solid red; */
+}
+.x {
+  border: 1px solid rgb(241, 241, 241);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.t {
+  border: 1px solid rgb(241, 241, 241);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.x1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-bottom: 10px solid rgb(30, 46, 84);
+  color: white;
+  background-color: rgb(45, 74, 140);
+}
+.x2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(197, 103, 140);
+  border-bottom: 10px solid rgb(179, 92, 157);
+}
+.x3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(63, 137, 190);
+  border-bottom: 10px solid rgb(36, 99, 145);
+}
+.graph {
+  border: 1px solid rgb(224, 223, 223);
+}
+.medics {
+  padding: 0.8rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid rgb(224, 223, 223);
+}
+.user-table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 20px 0;
+}
+.appointment {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+  border: none;
+  padding: 16px;
+  text-align: left;
+  min-width: 170px;
+  border-top: 1px solid #ddd; /* Keep horizontal lines */
+  border-bottom: 1px solid #ddd; /* Keep horizontal lines */
+  border-left: none; /* Remove vertical lines */
+  padding: 1rem;
+  text-align: left;
+}
+.j {
+  color: #cf5d85;
+}
+.user-table th {
+  background-color: rgb(246, 246, 246);
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  /* z-index: -2; */
+}
+
+.user-table tbody tr {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+.doctor-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.status-confirmed {
+  color: rgb(27, 112, 27);
+}
+.status-confirmed span {
+  background-color: rgb(179, 237, 199);
+  font-size: 11px;
+  padding: 4px;
+  border-radius: 0.6rem;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: orange;
+}
+.status-pending span {
+  background-color: rgb(255, 234, 196);
+  font-size: 11px;
+  padding: 4px;
+  border-radius: 0.6rem;
+  font-weight: bold;
+}
+
+.status-canceled {
+  color: red;
+}
+.status-canceled span {
+  background-color: rgb(255, 221, 221);
+  font-size: 11px;
+  padding: 4px;
+  border-radius: 0.6rem;
+  font-weight: bold;
+}
+
+.tabs {
+  /* border: 2px solid red; */
+  overflow-x: auto;
+}

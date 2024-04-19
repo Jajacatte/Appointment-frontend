@@ -1,0 +1,30 @@
+.doc-reviews {
+  display: flex;
+  position: relative;
+  /* border: 2px solid green; */
+}
+
+.sidebar {
+  width: 250px; /* Adjust as needed */
+  min-height: 110vh;
+  /* position: -webkit-sticky; */
+  position: sticky;
+  top: 67px; /* Height of the header */
+  /* padding: 20px; */
+  border: 1px solid rgb(233, 233, 233);
+  margin-bottom: 1rem;
+}
+
+.main {
+  width: calc(100% - 250px); /* Subtract 250px from 100% */
+  padding: 0;
+}
+.rev{
+    border: 1px solid rgb(236, 236, 236);
+}
+.patient4-img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+}

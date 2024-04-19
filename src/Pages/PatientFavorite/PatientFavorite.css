@@ -1,0 +1,60 @@
+.fav-doc {
+  display: flex;
+  position: relative;
+  /* border: 2px solid green; */
+}
+
+.sidebar {
+  width: 250px; /* Adjust as needed */
+  min-height: 100vh;
+  /* position: -webkit-sticky; */
+  position: sticky;
+  top: 67px; /* Height of the header */
+  /* padding: 20px; */
+  border: 1px solid rgb(233, 233, 233);
+}
+
+.main {
+  width: calc(100% - 250px); /* Subtract 250px from 100% */
+  padding: 0;
+}
+
+
+
+.but {
+  display: flex;
+  align-items: stretch; /* Ensure buttons stretch to match height */
+  gap: 4px;
+}
+
+
+.but button {
+  flex: 1; /* Distribute available space equally among buttons */
+  font-size: 11px;
+  border: none;
+  padding: 0.4rem 0.5rem;
+    height: 100%;
+}
+.view-profile1 {
+  border: 2px solid var(--color-primary) !important;
+
+  background-color: white;
+  color: var(--color-primary);
+  transition: 0.3s ease-in-out;
+  border-radius: 0.4rem;
+}
+.view-profile1:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+.book1{
+  background-color: var(--color-primary);
+  color: white;
+  transition: 0.3s ease-in-out;
+  border-radius: 0.4rem;
+  height: 100%;
+}
+.book1:hover {
+  background-color: var(--color-primary-hover);
+ 
+}

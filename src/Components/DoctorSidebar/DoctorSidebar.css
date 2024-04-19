@@ -1,0 +1,104 @@
+.doctor-dashboard {
+  display: flex;
+  position: relative;
+  /* border: 2px solid green; */
+}
+
+.sidebar {
+  width: 250px; /* Adjust as needed */
+  min-height: 110vh;
+  /* position: -webkit-sticky; */
+  position: sticky;
+  top: 67px; /* Height of the header */
+  /* padding: 20px; */
+  border: 1px solid rgb(233, 233, 233);
+  margin-bottom: 1rem;
+}
+
+.main {
+  width: calc(100% - 250px); /* Subtract 250px from 100% */
+  padding: 0;
+}
+
+.icon-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: 8px solid rgb(79, 133, 122);
+  border-left: 8px solid rgb(205, 205, 205);
+  padding: 1rem;
+}
+.icon-img2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: 8px solid rgb(99, 190, 111);
+  border-top: 8px solid rgb(205, 205, 205);
+}
+.icon-img3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: 8px solid rgb(228, 147, 124);
+  border-top: 8px solid rgb(205, 205, 205);
+}
+
+.ic-cont:nth-child(2){
+     border-right: 1px solid rgb(211, 211, 211);
+}
+.ic-cont:nth-child(1){
+     border-right: 1px solid rgb(211, 211, 211);
+}
+.ic-cont h2{
+    font-size: 15px;
+}
+.doc-top{
+    border: 1px solid rgb(233, 233, 233);
+    margin-bottom: 1rem;
+  
+}
+.doc-icon{
+    background-color: rgb(174, 210, 210);
+    color: rgb(66, 137, 144);
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+.doc-icon1{
+    background-color: rgb(174, 210, 210);
+    color: green;
+    border-radius: 0.4rem;
+    /* min-width: 100px; */
+}
+.doc-icon2{
+    background-color: rgb(238, 194, 194);
+    color: rgb(144, 38, 14);
+    border-radius: 0.4rem;
+    /* min-width: 100px; */
+}
+.doc-icon span{
+    font-size: 1rem;
+}
+.doc-icon span:nth-child(2){
+    font-size: 12px;
+}
+.doc-icon1 span{
+    font-size: 1rem;
+}
+.doc-icon1 span:nth-child(2){
+    font-size: 12px;
+}
+.doc-icon2 span{
+    font-size: 1rem;
+}
+.doc-icon2 span:nth-child(2){
+    font-size: 12px;
+}

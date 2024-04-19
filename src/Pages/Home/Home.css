@@ -1,0 +1,320 @@
+.home-wrapper {
+  background-color: rgb(246, 250, 254);
+}
+.specialites-wrapper {
+  background-color: white;
+}
+.doctors-wrapper {
+  background-color: rgb(246, 250, 254);
+}
+.work-wrapper {
+  background-color: white;
+}
+.articles-wrapper {
+  background-color: rgb(246, 250, 254);
+}
+.faq-wrapper {
+  background-color: rgb(246, 250, 254);
+}
+.m-app {
+  background-image: url("C:\Users\Idowu\Desktop\Appointment\frontend\src\bg.jpg");
+  color: white;
+  border-radius: 0.8rem;
+}
+.m-app-img {
+  height: auto;
+  width: 400px;
+}
+.section1 h2 {
+  font-size: 3rem;
+}
+.section1 h2 span {
+  color: var(--color-primary);
+}
+.start-consult button {
+  border: none;
+  background-color: var(--color-primary);
+  padding: 0.8rem 2.3rem;
+  color: white;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+}
+.section2 {
+  position: relative;
+}
+.banner1 {
+  position: absolute;
+  top: 35%;
+  left: -2rem;
+}
+.banner2 {
+  position: absolute;
+  top: 28%;
+  right: 1rem;
+}
+.banner3 {
+  position: absolute;
+  bottom: 5%;
+  right: 2rem;
+}
+
+@media (max-width: 640px) {
+  .banner1 {
+    width: 150px;
+    left: 1rem;
+  }
+  .banner2 {
+    width: 150px;
+    right: 0.5rem;
+    bottom: 0;
+  }
+  .banner3 {
+    width: 150px;
+    right: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .banner1 {
+    width: 100px;
+    left: 1rem;
+  }
+  .banner2 {
+    width: 100px;
+    right: 0.5rem;
+    bottom: 0;
+  }
+  .banner3 {
+    width: 100px;
+    right: 1rem;
+  }
+}
+.banner1,
+.banner3 {
+  animation: bounce 0.7s infinite alternate;
+}
+.banner2 {
+  animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.section1 {
+  position: relative;
+}
+.header-icon {
+  position: absolute;
+  top: -2rem;
+  right: 6rem;
+}
+.specialities-main {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+.speciality-arrow span {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 1.7rem;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+.speciality-arrow span:hover {
+  background-color: var(--color-primary);
+  transition: 0.9s ease-in-out;
+  cursor: pointer;
+  color: white;
+}
+.specialities-main {
+  overflow: hidden;
+}
+
+.scrollable-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  margin-bottom: 20px;
+  gap: 1rem;
+}
+
+.speciality-item {
+  flex: 0 0 265px; /* Width of each item */
+  padding: 10px;
+  border: 1px solid rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.doctor-item {
+  flex: 0 0 300px; /* Width of each item */
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgb(197, 191, 191);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.doctor-item-details {
+  padding: 1.5rem;
+}
+.doc-location span {
+  color: rgb(179, 174, 174);
+}
+
+/* Hide scrollbar */
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+.speciality-svg {
+  background-color: aliceblue;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  /* border: 2px solid red; */
+}
+.all-speciality {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all-speciality button {
+  border: none;
+  background-color: var(--color-primary);
+  padding: 0.7rem 2.3rem;
+  color: white;
+  border-radius: 0.4rem;
+}
+.work-svg svg {
+  background-color: aliceblue;
+  padding: 0.7rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+}
+.easy-steps {
+  font-size: 2rem;
+}
+.how-it-works {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+.work-search h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.work-search p {
+  font-size: 1rem;
+
+  color: rgb(155, 155, 155);
+}
+
+.latest-article {
+  display: flex;
+  justify-content: center;
+}
+
+.x {
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 1.3rem;
+  border-radius: 0.7rem;
+}
+.x h4 {
+  font-weight: 700;
+}
+
+.love div {
+  display: flex;
+  border: 1px solid rgb(212, 210, 210);
+  z-index: 99;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+}
+.love div span {
+  color: black;
+  margin-bottom: 0 !important;
+}
+
+.x {
+  flex: 1;
+  margin: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.x img {
+  /* max-width: 100%; */
+  width: 200px;
+  height: auto;
+}
+
+.x h4,
+.x b,
+.x p {
+  margin: 0;
+}
+.blog button {
+  border: 2px solid var(--color-primary);
+  background-color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.4rem;
+  color: var(--color-primary);
+}
+.blog button:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transition: 0.4s ease;
+}
+
+.m-app-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.m-app-text h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.faqq {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faqq h2 {
+  font-size: 2.1rem;
+}
+.faqq h3 {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.img-doc {
+  cursor: pointer;
+}
+.img-doc:hover {
+  filter: brightness(90%);
+}
+
+.bb .i .x{
+  overflow-x: scroll;
+}
