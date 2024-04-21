@@ -19,7 +19,7 @@ const Header = () => {
         { label: "Doctor Profile", to: "/doctor" },
         { label: "Profile Setting", to: "/doc-profile-settings" },
         { label: "Appointments", to: "/appointments" },
-        { label: "Doctor Login", to: "/login" },
+        { label: "Doctor Login", to: "/loginn" },
       ],
     },
     {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import Message from "../../Loading/Error/Error";
 import { useSelector, useDispatch } from "react-redux";
 
 import Loading from "../../Components/Loading/Loading";
@@ -11,7 +11,7 @@ import { doctorLogin, loginn } from "../../Redux/Actions/DoctorActions";
 const LoginDoctor = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch
 
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -38,7 +38,7 @@ const LoginDoctor = () => {
         <div className="container">
           <div className="row gx-5 justify-content-center align-items-center">
             <div className="col-md-6 col-12 d-md-block d-none ">
-              <img src="/images/log.PNG" className="img-fluid" />
+              <img src="/images/log.png" className="img-fluid" />
             </div>
             <div className="col-md-6 col-12 mt-3">
               <div className="login-container">
@@ -76,8 +76,8 @@ const LoginDoctor = () => {
                     </svg>
                   </div>
                   {loading && <Loading />}
-                  {/* {error && <Error variant="danger">{error}</Error>} */}
-                  <h2 className="text-center">Child Login</h2>
+                {error && <Message variant="danger">{error}</Message>}
+                  <h2 className="text-center">Doctor Login</h2>
                   <form onSubmit={(e) => handleLogin(e)}>
                     <div className="login-input">
                       <div>

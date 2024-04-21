@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import Message from "../../Loading/Error/Error";
 import { useSelector, useDispatch } from "react-redux";
 
 // import { register } from "../../Redux/Actions/UserActions";
@@ -71,7 +71,8 @@ const Register = () => {
                     </svg>
                   </div>
                   {loading && <Loading />}
-                  {/* {error && <Message variant="danger">{error}</Message>} */}
+                  {error && <Message variant="danger">{error}</Message>}{" "}
+          
                   <h2 className="text-center">Register</h2>
                   <form onSubmit={(e) => handleRegister(e)}>
                     <div className="login-input">

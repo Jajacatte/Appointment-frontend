@@ -42,7 +42,7 @@ const Login = () => {
         <div className="container">
           <div className="row gx-5 justify-content-center align-items-center">
             <div className="col-md-6 col-12 d-md-block d-none ">
-              <img src="/images/log.PNG" className="img-fluid" />
+              <img src="/images/log.png" className="img-fluid" />
             </div>
             <div className="col-md-6 col-12 mt-3">
               <div className="login-container">
@@ -81,7 +81,7 @@ const Login = () => {
                   </div>
                   {loading && <Loading />}
                   {error && <Message variant="danger">{error}</Message>}
-                  <h2 className="text-center">Child Login</h2>
+                  <h2 className="text-center">Patient Login</h2>
                   <form onSubmit={(e) => handleLogin(e)}>
                     <div className="login-input">
                       <div>
