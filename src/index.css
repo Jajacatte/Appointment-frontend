@@ -293,3 +293,35 @@ font-weight: 700;
     display: block; /* Display the toggle button */
   }
 }
+
+.primary {
+  color: var(--color-primary);
+}
+.success {
+  color: var(--color-success);
+}
+.danger {
+  color: white;
+  background-color: var(--color-danger);
+}
+.warning {
+  color: var(--color-warning);
+}
+.logo-x {
+  color: #febd69;
+}
+.alert-container {
+  /* border: 2px solid grey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.alert-container > div {
+  border: 2px solid green;
+  border: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

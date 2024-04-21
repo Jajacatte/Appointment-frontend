@@ -7,6 +7,11 @@ import { getDoctorDetails } from "../../Redux/Actions/DoctorActions";
 import axios from "axios";
 import SidebarDoctor from "../../Components/SidebarDoctor/SidebarDoctor";
 const DoctorDashboard = () => {
+
+  const api = axios.create({
+    baseURL: process.env.REACT_APP_API_URL, // Replace with your environment variable name
+  });
+
   const dispatch = useDispatch();
 
   const appointments = [
@@ -120,7 +125,7 @@ const DoctorDashboard = () => {
             "Content-Type": "application/json", // Adjust content type if necessary
           },
         };
-      const response = await axios.get(
+      const response = await api.get(
         `/api/appointment/appointments/doctor`, config
       );
       console.log("APPOPO YES", response.data.appointments);
@@ -153,7 +158,7 @@ const DoctorDashboard = () => {
           },
         };
       setLoadingA(true); // Set loading to true when accepting appointment
-      await axios.put(`/api/appointment/appointments/accept/${appointmentId}`, {},config);
+      await api.put(`/api/appointment/appointments/accept/${appointmentId}`, {},config);
       // Refresh appointments after accepting
       fetchAppointments();
     } catch (error) {
@@ -172,7 +177,7 @@ const DoctorDashboard = () => {
          },
        };
       setLoadingC(true); // Set loading to true when cancelling appointment
-      await axios.put(`/api/appointment/appointments/cancel/${appointmentId}`, {}, config);
+      await api.put(`/api/appointment/appointments/cancel/${appointmentId}`, {}, config);
       // Refresh appointments after cancelling
       fetchAppointments();
     } catch (error) {

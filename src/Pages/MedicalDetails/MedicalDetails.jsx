@@ -11,6 +11,10 @@ import MedicalDetailsModal from "../../Components/MedicalDetailsModal/MedicalDet
 import Sidebar from "../../Components/Sidebar/Sidebar";
 
 const MedicalDetails = () => {
+
+  const api = axios.create({
+    baseURL: process.env.REACT_APP_API_URL, // Replace with your environment variable name
+  });
   const medDetails = [
     {
       name: "Emeka",
@@ -73,7 +77,7 @@ const MedicalDetails = () => {
           "Content-Type": "application/json", // Adjust content type if necessary
         },
       };
-      const response = await axios.post(
+      const response = await api.post(
         "/api/patient/add-health-data",
         {
           newData: newDetails,

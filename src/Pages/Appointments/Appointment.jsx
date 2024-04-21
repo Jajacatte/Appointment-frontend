@@ -17,6 +17,10 @@ const Appointment = () => {
   const userInfoString = localStorage.getItem("doctorInfo"); // Retrieve string from local storage
   const userInfo = userInfoString ? JSON.parse(userInfoString) : null; // Parse string to object
 
+  const api = axios.create({
+    baseURL: process.env.REACT_APP_API_URL, // Replace with your environment variable name
+  });
+
   const fetchScheduledAppointments = async () => {
     try {
       const config = {
@@ -25,7 +29,7 @@ const Appointment = () => {
           "Content-Type": "application/json", // Adjust content type if necessary
         },
       };
-      const response = await axios.get(
+      const response = await api.get(
         `/api/appointment/appointments/scheduled`,
         config
       );
@@ -51,7 +55,7 @@ const Appointment = () => {
         },
       };
       setLoadingA(true); // Set loading to true when accepting appointment
-      await axios.put(
+      await api.put(
         `/api/appointment/appointments/accept/${appointmentId}`,
         {},
         config
@@ -74,7 +78,7 @@ const Appointment = () => {
         },
       };
       setLoadingC(true); // Set loading to true when cancelling appointment
-      await axios.put(
+      await api.put(
         `/api/appointment/appointments/cancel/${appointmentId}`,
         {},
         config

@@ -11,6 +11,9 @@ import SidebarDoctor from "../../Components/SidebarDoctor/SidebarDoctor";
 import SearchSidebar from "../../Components/SearchSidebar/SearchSidebar";
 
 const SearchDoctor = () => {
+  // const api = axios.create({
+  //   baseURL: process.env.REACT_APP_API_URL, // Replace with your environment variable name
+  // });
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

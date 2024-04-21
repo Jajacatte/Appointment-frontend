@@ -7,6 +7,7 @@ import { bookmarkDoctor, getPatient } from "../../Redux/Actions/PatientActions";
 import { Link } from 'react-router-dom';
 
 const DoctorProfile = () => {
+  
   const id = window.location.pathname.split("/")[2];
   const dispatch = useDispatch();
   const singleDoctors = useSelector((state) => state.singleDoctors);

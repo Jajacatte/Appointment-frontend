@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
+// import Message from "../Loading/Error/Error";
 import Loading from "../../Components/Loading/Loading";
 import { login, patientLogin } from './../../Redux/Actions/PatientActions';
+import Message from "../../Loading/Error/Error";
 
 
 const Login = () => {
@@ -79,7 +80,7 @@ const Login = () => {
                     </svg>
                   </div>
                   {loading && <Loading />}
-                  {/* {error && <Error variant="danger">{error}</Error>} */}
+                  {error && <Message variant="danger">{error}</Message>}
                   <h2 className="text-center">Child Login</h2>
                   <form onSubmit={(e) => handleLogin(e)}>
                     <div className="login-input">

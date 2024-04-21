@@ -58,9 +58,9 @@ function AppContent() {
               path="/doc/:id"
               element={
                 <Suspense fallback={<LazyLoading />}>
-                  <PrivateDoctor>
+                  {/* <PrivateDoctor> */}
                     <DoctorProfile />
-                  </PrivateDoctor>
+                  {/* </PrivateDoctor> */}
                 </Suspense>
               }
             />

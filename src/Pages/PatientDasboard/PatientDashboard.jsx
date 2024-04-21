@@ -10,6 +10,9 @@ import { getPatient } from "../../Redux/Actions/PatientActions";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 
 const PatientDashboard = () => {
+  const api = axios.create({
+    baseURL: process.env.REACT_APP_API_URL, // Replace with your environment variable name
+  });
   const dispatch = useDispatch();
   const appointments = [
     {
@@ -212,7 +215,7 @@ const PatientDashboard = () => {
             "Content-Type": "application/json", // Adjust content type if necessary
           },
         };
-        const response = await axios.get(
+        const response = await api.get(
           `/api/appointment/appointments/patient`,
           config
         );

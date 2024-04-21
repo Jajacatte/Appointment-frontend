@@ -6,8 +6,14 @@ import moment from "moment";
 import { getDoctor, getDoctorDetails } from "../../Redux/Actions/DoctorActions";
 import "./Booking.css"; // Import CSS file for styling
 import Loading from "../../Components/Loading/Loading";
+import Message from "../../Loading/Error/Error";
 
 const BookAppointment = () => {
+
+  const api = axios.create({
+    baseURL: process.env.REACT_APP_API_URL, // Replace with your environment variable name
+  });
+
   const dispatch = useDispatch();
   const id = window.location.pathname.split("/")[2];
   const singleDoctors = useSelector((state) => state.singleDoctors);
@@ -28,7 +34,8 @@ const BookAppointment = () => {
   const [selectedTime, setSelectedTime] = useState("");
   const [bookingStatus, setBookingStatus] = useState("");
   const [doctorId, setDoctorId] = useState(id);
- const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [appointmentDetails, setAppointmentDetails] = useState({
     doctorId: "",
     date: "",
@@ -65,7 +72,7 @@ const BookAppointment = () => {
           "Content-Type": "application/json", // Adjust content type if necessary
         },
       };
-      const response = await axios.get(
+      const response = await api.get(
         `/api/appointment/booked-appointments/${doctorId}?date=${moment(
           date
         ).format("YYYY-MM-DD")}`,
@@ -118,7 +125,7 @@ const BookAppointment = () => {
           "Content-Type": "application/json", // Adjust content type if necessary
         },
       };
-      const response = await axios.post(
+      const response = await api.post(
         "/api/appointment/book-appointment",
         appointmentDetails,
         config
@@ -128,6 +135,7 @@ const BookAppointment = () => {
       fetchBookedAppointments();
     } catch (error) {
       console.error("Error booking appointment:", error);
+      setError(error)
       setBookingStatus("error");
     } finally {
       setIsLoading(false); // Set loading to false when booking request completes
@@ -205,11 +213,11 @@ const BookAppointment = () => {
             Appointment booked successfully!
           </p>
         )}
-
         {bookingStatus === "error" && (
-          <p className="status-message">
-            Error booking appointment. Please try again later.
-          </p>
+          <div className="status-message">
+            <p>Error booking appointment. Please try again later.</p>
+            <Message variant="danger">{error.response.data.message}</Message>
+          </div>
         )}
       </div>
     </div>
