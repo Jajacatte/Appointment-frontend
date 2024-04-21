@@ -11,7 +11,7 @@ import { doctorLogin, loginn } from "../../Redux/Actions/DoctorActions";
 const LoginDoctor = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
 
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
