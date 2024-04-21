@@ -31,7 +31,7 @@ export const loginn = (email, password) => async (dispatch) => {
         "Content-Type": "application/json",
       },
     };
-    const { data } = await axios.post(
+    const { data } = await api.post(
       "/api/doctor/login",
       { email, password },
       config
