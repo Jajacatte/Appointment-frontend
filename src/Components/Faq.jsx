@@ -2,39 +2,43 @@ import React, { useState } from "react";
 // import "./FAQ.css"; // Import your CSS file for styling
 
 const FAQ = () => {
-  const AccordionData = [
-    {
-      id: "collapseOne",
-      title: "What is daycare management software?",
-      content:
-        "Daycare management software is a specialized tool designed to streamline and automate various administrative tasks within a daycare center. It assists in managing enrollments, schedules, staff, billing, parent communication, and more.",
-    },
-    {
-      id: "collapseTwo",
-      title: "What are the key features of daycare management software?",
-      content:
-        "Key features include attendance tracking, child profiles, staff management, billing and invoicing, scheduling, parent communication, immunization records, reporting, and often include additional features like meal planning, learning activities, and security features.",
-    },
-    {
-      id: "collapseThree",
-      title: "How does daycare management software benefit daycare centers?",
-      content:
-        "It helps improve operational efficiency by automating manual tasks, enhances communication between staff and parents, ensures accurate record-keeping, simplifies billing and payments, and provides insights for better decision-making.",
-    },
-    {
-      id: "collapseFour",
-      title:
-        "Is daycare management software secure for handling sensitive data?",
-      content:
-        "Reputable daycare management software providers prioritize data security. They often employ encryption methods, regular backups, secure logins, and adhere to compliance standards like HIPAA and GDPR to ensure data protection.",
-    },
-    {
-      id: "collapseFive",
-      title: "Can daycare management software assist with parent engagement?",
-      content:
-        "Yes, it facilitates transparent communication between daycare centers and parents. Features like real-time updates on children's activities, messaging, event calendars, and photo sharing help in fostering strong parent engagement.",
-    },
-  ];
+const AccordionData = [
+  {
+    id: "collapseOne",
+    title: "What is appointment scheduling software for doctors and patients?",
+    content:
+      "Appointment scheduling software for doctors and patients is a specialized tool designed to facilitate the booking of medical appointments and manage schedules efficiently. It allows patients to book appointments online, view available time slots, and provides doctors with tools to manage their availability and patient appointments.",
+  },
+  {
+    id: "collapseTwo",
+    title:
+      "What are the key features of appointment scheduling software for doctors and patients?",
+    content:
+      "Key features include online booking capabilities for patients, real-time availability updates, appointment reminders, patient intake forms, calendar integration with EMR systems, waitlist management, telemedicine integration, and secure messaging for communication between doctors and patients.",
+  },
+  {
+    id: "collapseThree",
+    title:
+      "How does appointment scheduling software benefit doctors and patients?",
+    content:
+      "It streamlines the appointment booking process, reduces no-shows with automated reminders, improves patient satisfaction by offering convenient online booking options, optimizes doctor's schedules for better efficiency, enhances communication between doctors and patients, and ensures accurate record-keeping for medical appointments.",
+  },
+  {
+    id: "collapseFour",
+    title:
+      "Is appointment scheduling software secure for handling sensitive patient information?",
+    content:
+      "Reputable appointment scheduling software providers prioritize data security. They implement robust encryption methods, maintain secure server infrastructure, conduct regular security audits, and comply with healthcare privacy regulations like HIPAA to safeguard patient confidentiality and protect sensitive medical information.",
+  },
+  {
+    id: "collapseFive",
+    title: "Can appointment scheduling software improve patient care?",
+    content:
+      "Yes, it can improve patient care by reducing wait times, ensuring timely appointments, enabling remote consultations through telemedicine features, providing easy access to medical records and appointment history, and facilitating seamless communication between doctors and patients for better coordination of care.",
+  },
+];
+
+
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleAccordionClick = (index) => {

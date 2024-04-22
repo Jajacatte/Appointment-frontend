@@ -50,7 +50,7 @@ const PatientFavorite = () => {
               </span>
               <div className="row">
                 {patient?.bookmarks?.map((doc, idx) => (
-                  <div className="col-4">
+                  <div className="col-lg-4 col-md-6 col-12">
                     <div className="x p-3">
                       <img
                         className="img-fluid w-100"

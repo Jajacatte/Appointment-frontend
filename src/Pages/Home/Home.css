@@ -18,6 +18,7 @@
 }
 .m-app {
   /* background-image: url("C:\Users\Idowu\Desktop\Appointment\frontend\src\bg.jpg"); */
+    background-color: rgb(14, 31, 66);
   color: white;
   border-radius: 0.8rem;
 }

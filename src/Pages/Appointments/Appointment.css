@@ -41,6 +41,7 @@
   overflow-x: scroll;
 }
 .appt-main{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100% !important;
+  margin-bottom: 1rem !important;
 }

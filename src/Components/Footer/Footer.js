@@ -9,7 +9,9 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-12">
-              <h2 className="mb-4">NurseryHub</h2>
+              <Link to={"/"} className="logo-img d-flex align-items-center">
+                <img className="img-fluid logo-imgv" src="/images/logo.png" />
+              </Link>
               <p>Features</p>
               <Link to={"/about"}>
                 {" "}
@@ -51,12 +53,12 @@ const Footer = () => {
                   </address>
                   <p>
                     <a href="tel:+234 8103193091" className="hotline">
-                      +234 8107880994
+                      +234 8103127182
                     </a>{" "}
                   </p>
                   <p>
                     <a href="mailto:davidodimayo@gmail.com" className="hotline">
-                      EfeJustice9255@gmail.com
+                      jajacatte@gmail.com
                     </a>{" "}
                   </p>
                 </div>
@@ -84,7 +86,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-12 pb">
                 <p>
-                  &copy;{new Date().getFullYear()} powered by Justice Efetobor
+                  &copy;{new Date().getFullYear()} powered by Jarvis
                   <span className="logo-x">X</span>
                 </p>
               </div>
