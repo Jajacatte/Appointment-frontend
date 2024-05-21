@@ -33,9 +33,10 @@ const BookAppointment = () => {
   const [bookedAppointments, setBookedAppointments] = useState([]);
   const [selectedTime, setSelectedTime] = useState("");
   const [bookingStatus, setBookingStatus] = useState("");
+     const [error, setError] = useState("");
   const [doctorId, setDoctorId] = useState(id);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+ 
   const [appointmentDetails, setAppointmentDetails] = useState({
     doctorId: "",
     date: "",
@@ -134,9 +135,10 @@ const BookAppointment = () => {
       // Update booked appointments after successful booking
       fetchBookedAppointments();
     } catch (error) {
-      console.error("Error booking appointment:", error);
-      setError(error)
+    
       setBookingStatus("error");
+        console.error("Error booking appointment:", error);
+        setError(error);
     } finally {
       setIsLoading(false); // Set loading to false when booking request completes
     }
@@ -166,16 +168,22 @@ const BookAppointment = () => {
       <div className="time-container">
         <h3 className="subtitle">Select a Time:</h3>
         {date && ( // Render time list only if date is selected
-          <ul className="time-list">
+          <ul>
             {doctor &&
-              doctor?.clinicInfo &&
-              doctor?.clinicInfo.timings &&
-              Object.entries(doctor?.clinicInfo.timings).map(([day, time]) => (
+              doctor.clinicInfo &&
+              doctor.clinicInfo.timings &&
+              Object.entries(doctor.clinicInfo.timings).map(([day, time]) => (
                 <li
                   key={day}
-                  onClick={() => handleTimeClick(time)}
+                  onClick={() => {
+                    if (time !== "Closed" && !isDateDisabled(date)) {
+                      handleTimeClick(time);
+                    }
+                  }}
                   className={`time-item ${
-                    isDateDisabled(date) ? "disabled" : "enabled"
+                    time === "Closed" || isDateDisabled(date)
+                      ? "disabled"
+                      : "enabled"
                   }`}
                 >
                   {day}: {time}
@@ -214,10 +222,7 @@ const BookAppointment = () => {
           </p>
         )}
         {bookingStatus === "error" && (
-          <div className="status-message">
-            <p>Error booking appointment. Please try again later.</p>
-            <Message variant="danger">{error.response.data.message}</Message>
-          </div>
+          <p className="error">{error.response.data.message}</p>
         )}
       </div>
     </div>

@@ -24,8 +24,9 @@ const SearchDoctor = () => {
   const [keyword, setKeyword] = React.useState("");
   const [isFiltered, setIsFiltered] = React.useState(false);
   console.log(isFiltered);
+    const [selectedSpecialties, setSelectedSpecialties] = useState([]);
 
-  const [selectedSpecialties, setSelectedSpecialties] = useState([]);
+
 
   const doctorList = useSelector((state) => state.doctorList);
   const { doctors, loading, error } = doctorList;
